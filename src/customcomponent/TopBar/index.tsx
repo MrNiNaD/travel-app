@@ -1,9 +1,17 @@
+import { Contact, Heart, Notification, SignIn } from "@/svg";
 import Link from "next/link";
 import React from "react";
 
 const TopBar = () => {
+  const otherLinks = [
+    { comp: <Contact />, text: "Call" },
+    { comp: <Heart />, text: "Whislist" },
+    { comp: <Notification />, text: "Notification" },
+    { comp: <SignIn />, text: "Sign In" },
+  ];
+
   return (
-    <header className="bg-primary-color py-[8px]">
+    <header className="bg-primary-color py-[12px]">
       <div className="wrapper flex justify-between items-center">
         <h1 className="text-white uppercase font-bold">
           <Link href="/">Travel App</Link>
@@ -31,6 +39,22 @@ const TopBar = () => {
             className="w-full focus:outline-none pr-[15px] pl-[32px] py-[7px] rounded-[999px] text-[13px] placeholder:text-[12px]"
           />
         </div>
+
+        <ul className="flex gap-[20px]">
+          {otherLinks.map((links) => (
+            <li>
+              <Link
+                className="flex justify-center items-center flex-col"
+                href="/"
+              >
+                <span className="inline-block h-[25px]">{links?.comp}</span>
+                <span className="text-white text-[12px] font-semibold">
+                  {links.text}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </header>
   );
