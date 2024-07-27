@@ -43,8 +43,8 @@ const TopBar = () => {
         </div>
 
         <ul className="flex gap-[20px]">
-          {otherLinks.map((links) => (
-            <li>
+          {otherLinks.map((links, index) => (
+            <li key={index}>
               <Link
                 className="flex justify-center items-center flex-col"
                 href="/"
