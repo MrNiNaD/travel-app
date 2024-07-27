@@ -19,7 +19,7 @@ const TopBar = () => {
           <Link href="/">Travel App</Link>
         </h1>
 
-        <div className="w-[40%] relative">
+        <div className="w-[50%] relative">
           <svg
             width="15"
             height="15"
@@ -38,7 +38,7 @@ const TopBar = () => {
           </svg>
           <input
             placeholder="Search"
-            className="w-full focus:outline-none pr-[15px] pl-[32px] py-[7px] rounded-[999px] text-[13px] placeholder:text-[12px]"
+            className="w-full focus:outline-none pr-[15px] pl-[32px] py-[10px] rounded-[999px] text-[13px] placeholder:text-[12px]"
           />
         </div>
 
