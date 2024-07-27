@@ -63,7 +63,7 @@ export function Nav({ navConfigs }: NavTypes) {
           return (
             <NavigationMenuItem key={navConfig?.id}>
               {hasNavContent ? (
-                <NavigationMenuTrigger className="bg-transparent text-white p-[0] hover:bg-transparent hover:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-white data-[active]:text-white">
+                <NavigationMenuTrigger className="bg-transparent text-white p-[0] hover:bg-transparent hover:text-white data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-white data-[active]:text-white font-semibold">
                   {navConfig?.linkText}
                 </NavigationMenuTrigger>
               ) : (
@@ -71,7 +71,7 @@ export function Nav({ navConfigs }: NavTypes) {
                   <NavigationMenuLink
                     className={cn(
                       navigationMenuTriggerStyle(),
-                      "bg-transparent text-white hover:bg-transparent hover:text-white"
+                      "bg-transparent text-white hover:bg-transparent hover:text-white p-[0] font-semibold"
                     )}
                   >
                     {navConfig?.linkText}
