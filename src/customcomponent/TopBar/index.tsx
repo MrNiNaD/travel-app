@@ -1,6 +1,8 @@
 import { Contact, Heart, Notification, SignIn } from "@/svg";
 import Link from "next/link";
 import React from "react";
+import { Nav } from "../Nav";
+import { navConfigs } from "@/constant/navConfigs";
 
 const TopBar = () => {
   const otherLinks = [
@@ -11,8 +13,8 @@ const TopBar = () => {
   ];
 
   return (
-    <header className="bg-primary-color py-[12px]">
-      <div className="wrapper flex justify-between items-center">
+    <header className="bg-primary-color pt-[12px]">
+      <div className="wrapper flex justify-between items-center pb-[8px]">
         <h1 className="text-white uppercase font-bold">
           <Link href="/">Travel App</Link>
         </h1>
@@ -55,6 +57,11 @@ const TopBar = () => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="bg-nav-color">
+        <div className="wrapper flex justify-center">
+          <Nav navConfigs={navConfigs} />
+        </div>
       </div>
     </header>
   );
